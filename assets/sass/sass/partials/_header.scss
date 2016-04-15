@@ -46,6 +46,9 @@ header{
               }
               span:nth-of-type(3){
                 color: $cartRemoveCol;
+                &:hover{
+                  color:darken($cartRemoveCol, 20);
+                }
               }
             }
         }

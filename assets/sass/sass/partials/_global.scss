@@ -50,6 +50,7 @@ h1{
   z-index: 999;
   color: #fff;
   text-align: center;
+  font-size: 15px;
   @include transition(0.3s);
   cursor: pointer;
   &:hover{
@@ -84,6 +85,9 @@ h1{
   @include transform(rotate(45deg));
   border-top: 1px solid $productNavCol;
   border-left: 1px solid $productNavCol;
+}
+.headerBtnClicked li:hover{
+    border-bottom: 1px solid $productNavCol;
 }
 @media #{$md-screen}{
   .headerBtnClicked::before{
