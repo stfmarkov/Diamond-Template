@@ -169,6 +169,14 @@ main {
           left: 50%;
         }
       }
+      ul{
+        li{
+          display: block;
+          width: 100%;
+          text-align: center;
+          padding: 10px 0;
+        }
+      }
     }
   }
   .products {
