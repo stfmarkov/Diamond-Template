@@ -7,17 +7,20 @@ main {
       color: #fff;
       text-align: center;
       height: 237px;
-      h2 {
-        margin: 65px 0 18px 0;
-        font-size: 40px;
-        position: relative;
-        z-index: 999;
-      }
-      p {
+      div:last-of-type {
+        display: inline-block;
+        @include fullyCentered;
         width: 80%;
-        margin: 0 auto 70px auto;
-        position: relative;
-        z-index: 999;
+        h2 {
+          margin: 0 0 18px 0;
+          font-size: 40px;
+          position: relative;
+          z-index: 999;
+        }
+        p {
+          position: relative;
+          z-index: 999;
+        }
       }
       .mask{
         @include opacity(0.2);
@@ -50,24 +53,24 @@ main {
   @media #{$lg-screen}{
     .collection{
       div {
-        h2 {
-          font-size: 25px;
-          padding: 50px 0 20px;
-          margin: 0;
-        }
-        p {
-          width: 95%;
-          margin: 0 auto;
-          padding: 10px 0;
+        div:last-of-type {
+          h2 {
+            font-size: 25px;
+            margin: 0;
+          }
+          p {
+            margin: 0 auto;
+            padding: 10px 0;
+          }
         }
       }
     }
   }
-  @media #{$sm-screen}{
+  @media #{$lg-screen}{
     .collection{
       div {
-        h2 {
-          padding: 60px 0 10px 0;
+        div:last-of-type {
+          width: 95%;
         }
       }
     }
@@ -194,17 +197,18 @@ main {
     .productDescription {
       padding: 0;
       .productSlider {
-        .fa.sliderArrow{
+        .sliderArrow{
           opacity: 0;
           @include transition(.3s);
         }
         margin: 0;
         padding: 0;
         .product {
+          height: 520px;
           h3 {
             color: $mainColor;
             font-size: 14px;
-            margin: 20px 0 320px 20px;
+            margin: 20px 0 0 20px;
             span {
               display: block;
               color: #000;
@@ -217,8 +221,10 @@ main {
           }
           > span {
             display: block;
-            padding: 10px 0 40px 0;
             text-align: center;
+            @include fullyCentered;
+            top:auto;
+            bottom: 100px;
           }
           > div {
             width: 100%;
@@ -226,7 +232,8 @@ main {
             line-height: 68px;
             background-color: $productNavCol;
             padding: 0 35px 0 25px;
-            position: relative;
+            position: absolute;
+            bottom: 0;
             @include transition(0.3s);
             a {
               display: block;
@@ -275,7 +282,7 @@ main {
         }
       }
       &:hover{
-        .fa.sliderArrow{
+        .sliderArrow{
           opacity: 1;
         }
       }
@@ -434,8 +441,7 @@ main {
         @include transition(0.3s);
       }
       li:hover {
-        font-size: 1.1em;
-        color: $cartPriceCol;
+        background-color: darken($productNavCol, 10);
       }
       li.selected {
         display: block;
@@ -521,8 +527,7 @@ main {
         font-weight: bold;
         @include transition(0.3s);
         &:hover{
-          width: 130px;
-          @include border-radius(10px);
+          background-color: darken(#cecece, 10);
         }
       }
     }
@@ -538,15 +543,17 @@ main {
     ul.slick-dots{
       top: 57%;
     }
-    .fa.sliderArrow{
+    .sliderArrow{
       opacity: 0;
       @include transition(.3s);
+      width: 25px;
+      height: 25px;
       top: 37%;
     }
-    .fa.arrowLeft{
+    .arrowLeft{
       left: 0;
     }
-    .fa.arrowRight{
+    .arrowRight{
       right: 0;
     }
     div{
@@ -617,7 +624,7 @@ main {
   .productModel:hover .myBtn{
     @include opacity(1);
   }
-  .productModel:hover .fa.sliderArrow{
+  .productModel:hover .sliderArrow{
     opacity: 1;
   }
   $images: (imageOne,imageTwo,imageThree);

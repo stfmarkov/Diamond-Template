@@ -11,8 +11,8 @@ header{
     padding: 21px 0 7px 0;
     li{
       display: inline-block;
-      padding: 0 12px 0 12px;
-      margin: 0 24px 0 0;
+      padding: 0 12px;
+      margin: 0 58px 0 0;
       @include transition(0.3s);
       ul.cart{
         right: -24px;
@@ -93,16 +93,8 @@ header{
       }
       @media #{$sm-screen}{
         ul.cart{
-          top: 54px;
-        }
-        ul.cart::before{
-          display: none;
-        }
-      }
-      @media #{$sm-screen}{
-        ul.cart{
           width: 240px;
-          top: 54px;
+          top: 35px;
         }
         ul.cart::before{
           display: none;
@@ -111,6 +103,12 @@ header{
       &:hover{
         color:$cartPriceCol;
       }
+    }
+    li.userBtn,
+    li.searchBtn,
+    li.cartBtn{
+      padding: 0 12px;
+      margin: 0 24px 0 0;
     }
     li.current{
       border-bottom: 2px solid $mainColor;
@@ -154,6 +152,11 @@ header{
         }
       }
     }
+    @media #{$lg-screen} {
+      li{
+        margin: 0 24px 0 0;
+      }
+    }
     @media #{$md-screen}{
       li.userBtn>div{
         top: 99%;
@@ -169,6 +172,57 @@ header{
         top:0;
       }
     }
+    .searchBtn{
+      position: relative;
+      form{
+        display: none;
+        position: absolute;
+        z-index: 9999;
+        height: 61px;
+        width: 300px;
+        background-color: #fff;
+        border: 1px solid $productNavCol;
+        border-top: none;
+        right: 0;
+        top: 38px;
+        input[type=text]{
+          position: absolute;
+          @include fullyCentered;
+          border: 1px solid $productNavCol;
+          width: 90%;
+          height: 40px;
+          padding: 0 0 0 5px;
+          font-weight: lighter;
+        }
+        button[type=submit]{
+          position: absolute;
+          border: none;
+          background-color: transparent;
+          height: 40px;
+          width: 40px;
+          top: 50%;
+          @include transform(translateY(-50%));
+          right: 5%;
+        }
+      }
+    }
+    @media #{$sm-screen} {
+      .searchBtn{
+        form{
+          top: 33px;
+          right: -100px;
+        }
+      }
+    }
+    @media #{$xs-screen} {
+      .searchBtn{
+        form{
+          width: 250px;
+          left: auto;
+          right: -165px;
+        }
+      }
+    }
   }
   ul:nth-of-type(3){
     float: right;
@@ -177,7 +231,10 @@ header{
     display: none;
   }
     img.logo {
-      @include fullyCentered;
+      position: absolute;
+      left: 50%;
+      top: 10px;
+      transform: translateX(-50%);
   }
   ul.mobile{
     display: none;
@@ -201,12 +258,11 @@ header{
     }
     ul.mobile{
       display: none;
-      position:relative;
-      top: 65px;
-      z-index: 9999;
-      background-color: #fff;
-      width: 100%;
+      width:50%;
       padding: 5px 0 0 0;
+      position: absolute;
+      background-color: #fff;
+      z-index: 9999;
       li{
         text-align: center;
         margin: 0;
@@ -218,24 +274,28 @@ header{
   }
 }
 @media #{$sm-screen} {
+  nav{
+    background-color: $productNavCol;
+  }
   header{
+    padding: 84px 0 0 0;
     .mobileMenuIcon{
       margin: 15px 12px 0 15px;
     }
     img.logo{
-      left: 90%;
-      top: 40px;
+      @include transform(translateX(-50%));
+      left: 50%;
+      top: 20px;
     }
     ul.smallMenu{
-      float: none;
-      text-align: center;
-      display: block;
-      width: 80%;
-      margin: 20px auto;
+      text-align:right;
+      display:inline-block;
+      margin:0;
       @include transition(.3s);
-      &.active{
-        margin:70px auto 20px auto;
-      }
+    }
+    ul.mobile{
+      width: 100%;
+      top: 138px;
     }
   }
 }

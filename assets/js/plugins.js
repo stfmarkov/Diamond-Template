@@ -7,8 +7,8 @@ $(document).ready(function(){
         fade:true,
         arrows:true,
         dots:true,
-        nextArrow:'<i class="fa fa-angle-right sliderArrow arrowRight" aria-hidden="true"></i>',
-        prevArrow:'<i class="fa fa-angle-left sliderArrow arrowLeft" aria-hidden="true"></i>'
+        nextArrow:'<div class="sliderArrow arrowRight" aria-hidden="true"></div>',
+        prevArrow:'<div class="sliderArrow arrowLeft" aria-hidden="true"></div>'
     });
     //Main page small slider
     $('.productSlider').slick({
@@ -16,15 +16,15 @@ $(document).ready(function(){
         fade:true,
         arrows:true,
         dots:true,
-        nextArrow:'<i class="fa fa-angle-right sliderArrow arrowRight" aria-hidden="true"></i>',
-        prevArrow:'<i class="fa fa-angle-left sliderArrow arrowLeft" aria-hidden="true"></i>'
+        nextArrow:'<div class="sliderArrow arrowRight" aria-hidden="true"></div>',
+        prevArrow:'<div class="sliderArrow arrowLeft" aria-hidden="true"></div>'
     });
     //Product page sliders
     $('.productModel').slick({
         fade:true,
         arrows:true,
         dots:true,
-        nextArrow:'<i class="fa fa-angle-right sliderArrow arrowRight" aria-hidden="true"></i>',
-        prevArrow:'<i class="fa fa-angle-left sliderArrow arrowLeft" aria-hidden="true"></i>'
+        nextArrow:'<div class="sliderArrow arrowRight" aria-hidden="true"></div>',
+        prevArrow:'<div class="sliderArrow arrowLeft" aria-hidden="true"></div>'
     });
 });
