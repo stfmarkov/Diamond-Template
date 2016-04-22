@@ -4,6 +4,7 @@
     line-height: 75px;
     color: #fff;
     margin: 0 0 40px 0;
+    padding: 0;
     ol{
       padding: 0 0 0 20px;
       margin: 0;
@@ -37,5 +38,165 @@
       background-color: $mainColor;
     }
 
+  }
+  @media #{$lg-screen} {
+    .orderProgress{
+      line-height: normal;
+      font-size: 14px;
+      height: 100%;
+      position: relative;
+      ol{
+        padding: 0 10px;
+        width: 100%;
+        li{
+          padding: 30px 0;
+          display: block;
+          text-align: center;
+        }
+      }
+      >a{
+        width: 100%;
+        height: 72px;
+        line-height: 72px;
+        overflow: hidden;
+      }
+      .stepReached{
+        position: absolute;
+        top: 0;
+        right: 0;
+        width: 4px;
+        height: 100%;
+        &:after{
+          width: 100%;
+          height: 78.5%;
+        }
+      }
+    }
+  }
+  .orderReview{
+    div{
+      padding: 0 0 15px 0;
+      border-bottom:1px solid lighten($cartPriceCol, 12);
+      h3{
+        display: inline-block;
+        height: 40px;
+        line-height: 40px;
+        margin: 0;
+        font-size: 25px;
+        font-weight: bold;
+      }
+      @media #{$sm-screen}{
+        h3{
+          margin: 20px 0;
+          display: block;
+          text-align: center;
+        }
+      }
+      a{
+        float: right;
+        padding: 0 13px;
+        color: $mainColor;
+        font-weight: bold;
+        height: 40px;
+        line-height: 40px;
+      }
+      .myBtn{
+        width: 150px;
+        padding: 0;
+        color: #fff;
+      }
+      @media #{$sm-screen} {
+        a,
+        .myBtn{
+          width: 50%;
+        }
+      }
+    }
+    .verify{
+      color:$cartPriceCol;
+      div{
+        border: none;
+      }
+      h4{
+        color: #000;
+        font-size: 20px;
+        font-weight: bold;
+        margin: 40px 0 0 0;
+      }
+      p{
+        margin: 20px 0;
+      }
+      span{
+        span{
+          color: #000;
+        }
+      }
+      a{
+        display: block;
+        text-align: left;
+        float: none;
+        padding: 20px 0;
+        margin: 0 0 55px 0;
+      }
+      textarea{
+        display: block;
+        max-width: 86.34%;
+        min-width: 86.34%;
+        min-height: 106px;
+        max-height: 106px;
+        padding: 12px;
+        border: 1px solid $productNavCol;
+      }
+      @media #{$md-screen} {
+        textarea{
+          max-width: 100%;
+          min-width: 100%;
+        }
+      }
+      form{
+        margin: 20px 0 0 0;
+        padding: 17px 0;
+        border-top: 1px solid $productNavCol;
+        label{
+          margin: 0 29px 0 0;
+        }
+        input{
+          background-color: transparent;
+        }
+      }
+      .summary{
+        .ordered{
+          padding: 20px 0;
+          img{
+            float: left;
+            width: 45px;
+          }
+          >span:nth-of-type(1){
+            font-size: 15px;
+          }
+          >span:nth-of-type(2){
+            font-size: 12px;
+            font-weight: normal;
+          }
+          >span:nth-of-type(3){
+            font-size: 17px;
+          }
+          span{
+            display: block;
+            margin: 10px 0 0 108px;
+            color: black;
+            font-weight: bold;
+            span{
+              color: $cartPriceCol;
+              display: inline;
+              margin: 0;
+              padding: 0;
+              font-size: 12px;
+            }
+          }
+
+        }
+      }
+    }
   }
 }

@@ -105,3 +105,14 @@ $('.dropMenu li').not('.selected').click(function(){
     $(this).parents().eq(1).find('ul').not('.extended').slideToggle(300);
 });
 */
+
+//*****************Order page steps bar*****************
+
+
+
+if($(window).width() < 768){
+    $('.orderProgress li').text(function(){
+        $text = $(this).index() + 1;
+        return $text;
+    });
+}

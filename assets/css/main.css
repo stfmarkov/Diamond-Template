@@ -1701,30 +1701,31 @@ main .productsCollection .collectionImages {
   line-height: 75px;
   color: #fff;
   margin: 0 0 40px 0;
+  padding: 0;
 }
-/* line 7, ../sass/sass/partials/_order.scss */
+/* line 8, ../sass/sass/partials/_order.scss */
 .order .orderProgress ol {
   padding: 0 0 0 20px;
   margin: 0;
   display: inline-block;
 }
-/* line 11, ../sass/sass/partials/_order.scss */
+/* line 12, ../sass/sass/partials/_order.scss */
 .order .orderProgress ol li {
   padding: 0 50px 0 0;
   display: inline-block;
   cursor: pointer;
 }
-/* line 16, ../sass/sass/partials/_order.scss */
+/* line 17, ../sass/sass/partials/_order.scss */
 .order .orderProgress ol .reached {
   color: #5ec57e;
 }
-/* line 20, ../sass/sass/partials/_order.scss */
+/* line 21, ../sass/sass/partials/_order.scss */
 .order .orderProgress .stepReached {
   background-color: #a1a1a1;
   height: 4px;
   position: relative;
 }
-/* line 24, ../sass/sass/partials/_order.scss */
+/* line 25, ../sass/sass/partials/_order.scss */
 .order .orderProgress .stepReached:after {
   display: block;
   content: '';
@@ -1732,13 +1733,196 @@ main .productsCollection .collectionImages {
   width: 50.5%;
   background-color: #5ec57e;
 }
-/* line 32, ../sass/sass/partials/_order.scss */
+/* line 33, ../sass/sass/partials/_order.scss */
 .order .orderProgress > a {
   float: right;
   display: inline-block;
   width: 123px;
   text-align: center;
   background-color: #5ec57e;
+}
+@media (max-width: 1200px) {
+  /* line 43, ../sass/sass/partials/_order.scss */
+  .order .orderProgress {
+    line-height: normal;
+    font-size: 14px;
+    height: 100%;
+    position: relative;
+  }
+  /* line 48, ../sass/sass/partials/_order.scss */
+  .order .orderProgress ol {
+    padding: 0 10px;
+    width: 100%;
+  }
+  /* line 51, ../sass/sass/partials/_order.scss */
+  .order .orderProgress ol li {
+    padding: 30px 0;
+    display: block;
+    text-align: center;
+  }
+  /* line 57, ../sass/sass/partials/_order.scss */
+  .order .orderProgress > a {
+    width: 100%;
+    height: 72px;
+    line-height: 72px;
+    overflow: hidden;
+  }
+  /* line 63, ../sass/sass/partials/_order.scss */
+  .order .orderProgress .stepReached {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 4px;
+    height: 100%;
+  }
+  /* line 69, ../sass/sass/partials/_order.scss */
+  .order .orderProgress .stepReached:after {
+    width: 100%;
+    height: 78.5%;
+  }
+}
+/* line 77, ../sass/sass/partials/_order.scss */
+.order .orderReview div {
+  padding: 0 0 15px 0;
+  border-bottom: 1px solid silver;
+}
+/* line 80, ../sass/sass/partials/_order.scss */
+.order .orderReview div h3 {
+  display: inline-block;
+  height: 40px;
+  line-height: 40px;
+  margin: 0;
+  font-size: 25px;
+  font-weight: bold;
+}
+@media (max-width: 768px) {
+  /* line 89, ../sass/sass/partials/_order.scss */
+  .order .orderReview div h3 {
+    margin: 20px 0;
+    display: block;
+    text-align: center;
+  }
+}
+/* line 95, ../sass/sass/partials/_order.scss */
+.order .orderReview div a {
+  float: right;
+  padding: 0 13px;
+  color: #5ec57e;
+  font-weight: bold;
+  height: 40px;
+  line-height: 40px;
+}
+/* line 103, ../sass/sass/partials/_order.scss */
+.order .orderReview div .myBtn {
+  width: 150px;
+  padding: 0;
+  color: #fff;
+}
+@media (max-width: 768px) {
+  /* line 109, ../sass/sass/partials/_order.scss */
+  .order .orderReview div a,
+  .order .orderReview div .myBtn {
+    width: 50%;
+  }
+}
+/* line 115, ../sass/sass/partials/_order.scss */
+.order .orderReview .verify {
+  color: #a1a1a1;
+}
+/* line 117, ../sass/sass/partials/_order.scss */
+.order .orderReview .verify div {
+  border: none;
+}
+/* line 120, ../sass/sass/partials/_order.scss */
+.order .orderReview .verify h4 {
+  color: #000;
+  font-size: 20px;
+  font-weight: bold;
+  margin: 40px 0 0 0;
+}
+/* line 126, ../sass/sass/partials/_order.scss */
+.order .orderReview .verify p {
+  margin: 20px 0;
+}
+/* line 130, ../sass/sass/partials/_order.scss */
+.order .orderReview .verify span span {
+  color: #000;
+}
+/* line 134, ../sass/sass/partials/_order.scss */
+.order .orderReview .verify a {
+  display: block;
+  text-align: left;
+  float: none;
+  padding: 20px 0;
+  margin: 0 0 55px 0;
+}
+/* line 141, ../sass/sass/partials/_order.scss */
+.order .orderReview .verify textarea {
+  display: block;
+  max-width: 86.34%;
+  min-width: 86.34%;
+  min-height: 106px;
+  max-height: 106px;
+  padding: 12px;
+  border: 1px solid #ececec;
+}
+@media (max-width: 992px) {
+  /* line 151, ../sass/sass/partials/_order.scss */
+  .order .orderReview .verify textarea {
+    max-width: 100%;
+    min-width: 100%;
+  }
+}
+/* line 156, ../sass/sass/partials/_order.scss */
+.order .orderReview .verify form {
+  margin: 20px 0 0 0;
+  padding: 17px 0;
+  border-top: 1px solid #ececec;
+}
+/* line 160, ../sass/sass/partials/_order.scss */
+.order .orderReview .verify form label {
+  margin: 0 29px 0 0;
+}
+/* line 163, ../sass/sass/partials/_order.scss */
+.order .orderReview .verify form input {
+  background-color: transparent;
+}
+/* line 168, ../sass/sass/partials/_order.scss */
+.order .orderReview .verify .summary .ordered {
+  padding: 20px 0;
+}
+/* line 170, ../sass/sass/partials/_order.scss */
+.order .orderReview .verify .summary .ordered img {
+  float: left;
+  width: 45px;
+}
+/* line 174, ../sass/sass/partials/_order.scss */
+.order .orderReview .verify .summary .ordered > span:nth-of-type(1) {
+  font-size: 15px;
+}
+/* line 177, ../sass/sass/partials/_order.scss */
+.order .orderReview .verify .summary .ordered > span:nth-of-type(2) {
+  font-size: 12px;
+  font-weight: normal;
+}
+/* line 181, ../sass/sass/partials/_order.scss */
+.order .orderReview .verify .summary .ordered > span:nth-of-type(3) {
+  font-size: 17px;
+}
+/* line 184, ../sass/sass/partials/_order.scss */
+.order .orderReview .verify .summary .ordered span {
+  display: block;
+  margin: 10px 0 0 108px;
+  color: black;
+  font-weight: bold;
+}
+/* line 189, ../sass/sass/partials/_order.scss */
+.order .orderReview .verify .summary .ordered span span {
+  color: #a1a1a1;
+  display: inline;
+  margin: 0;
+  padding: 0;
+  font-size: 12px;
 }
 
 /* line 1, ../sass/sass/partials/_footer.scss */

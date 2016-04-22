@@ -169,20 +169,95 @@
 <main>
     <div class="container">
         <section class="order">
-            <div class="orderProgress">
-                <ol>
-                    <li class="reached">1.Shopping cart</li>
-                    <li class="reached">2.Sign in</li>
-                    <li class="reached">3.Address</li>
-                    <li class="reached">4.Shopping</li>
-                    <li class="reached">5.Verify</li>
-                    <li>6.Thank you</li>
-                </ol>
-                <a href="#">Back to shop</a>
-                <div class="stepReached"></div>
-            </div>
-            <div class="orderReview">
+            <div class="row">
+                <div  class="col-xs-2 col-lg-12">
+                    <div class="orderProgress">
+                        <ol>
+                            <li class="reached">1.Shopping cart</li>
+                            <li class="reached">2.Sign in</li>
+                            <li class="reached">3.Address</li>
+                            <li class="reached">4.Shopping</li>
+                            <li class="reached">5.Verify</li>
+                            <li>6.Thank you</li>
+                        </ol>
+                        <a href="#">Back to shop</a>
+                        <div class="stepReached"></div>
+                    </div>
+                </div>
+                <div class="col-xs-10 col-lg-12">
+                    <div class="orderReview clearfix">
+                        <div class="clearfix">
+                            <h3>Review</h3>
+                            <a href="#" class="myBtn">Continue</a>
+                            <a href="#">Back to cart</a>
+                        </div>
+                        <section class="verify">
+                            <div class="col-sm-6 col-md-8">
+                                    <div class="col-md-6 col-lg-4">
+                                        <h4>Shipping address</h4>
+                                        <p>Newest zone 22, Netherlands fgdd, Amsterdam, Central</p>
+                                        <span>Postal code:<span>1000</span></span>
+                                        <span>Phone:<span>+359865125465</span></span>
+                                        <a href="#">Edit</a>
+                                    </div>
+                                    <div class="col-md-6 col-lg-4">
+                                        <h4>Billing address</h4>
+                                        <p>Newest zone 22, Netherlands fgdd, Amsterdam, Central</p>
+                                        <span>Postal code:<span>1000</span></span>
+                                        <span>Phone:<span>+359865125465</span></span>
+                                        <a href="#">Edit</a>
+                                    </div>
+                                <textarea name="orderNote" id="">Order note</textarea>
 
+                                <h4>Payment providers</h4>
+                                <form>
+                                    <input type="radio" name="paymentProviders" value="1" id="stripe">
+                                    <label for="stripe">Stripe</label>
+
+                                    <input type="radio" name="paymentProviders" value="2" id="skrill">
+                                    <label for="skrill">Skrill</label>
+
+
+                                    <input type="radio" name="paymentProviders" value="3" id="paypall">
+                                    <label for="paypall">PayPall</label>
+
+
+                                    <input type="radio" name="paymentProviders" value="4" id="checkout">
+                                    <label for="checkout">2Checkout</label>
+                                </form>
+                            </div>
+                            <div class="col-sm-6 col-md-4">
+                                <div class="summary">
+                                    <h4>Summary</h4>
+                                    <div class="ordered clearfix">
+                                            <img src="assets/images/cartProductSix.png" alt="">
+                                        <div>
+                                            <span>Fasion suit</span>
+                                            <span>Color:<span>Blue</span> Size:<span>M</span></span>
+                                            <span>$800.0</span>
+                                        </div>
+                                    </div>
+                                    <div class="ordered clearfix">
+                                            <img src="assets/images/cartProductFive.png" alt="">
+                                        <div>
+                                            <span>Old suit</span>
+                                            <span>Color:<span>Blue</span> Size:<span>M</span></span>
+                                            <span>$800.0</span>
+                                        </div>
+                                    </div>
+                                    <div class="ordered clearfix">
+                                            <img src="assets/images/cartProductFour.png" alt="">
+                                        <div>
+                                            <span>Old suit</span>
+                                            <span>Color:<span>Blue</span> Size:<span>M</span></span>
+                                            <span>$800.0</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </section>
+                    </div>
+                </div>
             </div>
         </section>
     </div>
